@@ -1,0 +1,26 @@
+*{margin: 0;padding: 0}
+a{text-decoration: none;}  /*去除a标签文本装饰*/
+kbd{border: 1px solid red;width: 4em; height: 4em;
+    display: inline-block; /*kbd是内联元素,无法设置宽高*/
+    text-transform: uppercase;/*小写字母变大写*/
+    position: relative;    
+}
+kbd > button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+kbd:hover > button{
+    display: inline-block;
+}
+main{text-align: center;}
+#mainxxx{
+    display: inline-block;  /*d:ib+父元素tac元素 居中*/
+}
+#mainxxx > diva:nth-child(2){
+    margin-left: 2em;
+}
+#mainxxx > diva:nth-child(3){
+    margin-left: 4em;
+}
