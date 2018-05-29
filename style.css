@@ -1,6 +1,6 @@
 *{margin: 0;padding: 0}
 a{text-decoration: none;}  /*去除a标签文本装饰*/
-kbd{border: 1px solid red;width: 4em; height: 4em;
+kbd{width: 50px; height: 40px;
     display: inline-block; /*kbd是内联元素,无法设置宽高*/
     text-transform: uppercase;/*小写字母变大写*/
     position: relative;    
@@ -14,13 +14,41 @@ kbd > button{
 kbd:hover > button{
     display: inline-block;
 }
-main{text-align: center;}
-#mainxxx{
+body{
+    background: red url(./wall.jpg) no-repeat center center;
+    background-size: cover;
+}
+main{text-align: center;
+    display: flex;            /*绝对居中*/
+    justify-content: center;  /*绝对居中*/
+    align-items: center;      /*绝对居中*/
+    height: 100vh;
+}
+#main{
     display: inline-block;  /*d:ib+父元素tac元素 居中*/
 }
-#mainxxx > diva:nth-child(2){
-    margin-left: 2em;
+#main > div:nth-child(2){margin-left: -8px;}
+#main > div:nth-child(3){margin-left: -128px;}
+.wrapper{background: rgba(255,255,255,0.2);
+    border-radius: 10px;
 }
-#mainxxx > diva:nth-child(3){
-    margin-left: 4em;
+
+.key{
+    width: 70px;height: 70px;background: linear-gradient(to bottom,#292929 0%,#111111 100%);border: 1px solid #373737;
+    color: #C5C5C5;border-radius: 6px;box-shadow: 0 0 0 1px #1A1B1C,0 0 0 2PX #1F2020,0 3px 0 2PX #080808;
+    position: relative;
+    font-size: 16px; font-family: Helvetica;}
+.row{margin: 20px;}
+.row .key{margin:0 10px;}
+.key img{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 4px;
+    bottom: 2px;
+}
+.key .text{
+    position: absolute;
+    left: 4px;
+    top: 2px;
 }
